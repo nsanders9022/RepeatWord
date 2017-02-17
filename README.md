@@ -18,25 +18,25 @@ This web application is for counting the number of times a word is included in u
 
 ## Specifications
 
-**The user inputs one letter and the same letter to search for, and the match for that letter is outputted.**
+**The user inputs one letter and the same letter to search for, and the match count for that letter is outputted.**
 * Example Input: "a", "a"
 * Example Output: 1
 * One letter is the simplest input that a person could enter.
 
-**The user inputs one word and the same word to search for, and the match for that word is outputted.**
+**The user inputs one word and the same word to search for, and the match count for that word is outputted.**
 * Example Input: "bananas", "bananas"
 * Example Output: 1
 * One word is the next simplest input from a user. This input value also contains the letter "a" which was used in the first test which guarantees that both tests will pass.
 
-**The user inputs multiple words and a word to search for and the match for that word is outputted.**
+**The user inputs multiple words and a word to search for, and the match count for that word is outputted.**
 * Example Input: "monkeys like to eat bananas", "bananas"
 * Example Output: 1
-* This input contains the word that was used in the previous test so all tests will continue to pass.
+* This input contains the word that was used in the previous test so all tests will continue to pass and it was only used once.
 
-**The user inputs multiple words and a word to search for and the match for that word is outputted. The searched word is found more than once**
+**The user inputs multiple words and a word to search for and the match count for that word is outputted. The searched word is found more than once**
 * Example Input: "monkeys like to eat bananas for breakfast and bananas for dinner", "bananas"
 * Example Output: 2
-* This input contains the word that was used in the previous test so all tests will continue to pass.
+* This input contains the word that was used in the previous test so all tests will continue to pass and the word shows up more than once.
 
 **The user inputs multiple words and a word to search for. If the word is not in the sentence an error message is displayed**
 * Example Input: "monkeys like to eat bananas", "apple"
@@ -49,9 +49,14 @@ This web application is for counting the number of times a word is included in u
 * The input for the searched word is very similar to the word in the sentence but it is not an exact match.
 
 **The user inputs multiple words and a word to search for and it is case insensitive to account for user mistakes**
-* Example Input: "monkeys like to eat bananas", "Bananas"
+* Example Input: "monkeys like to eat bananas", "bAnAnAs"
 * Example Output: 1
-* The input for the searched word is capitalized but it is still the same as the word in the sentence.
+* The input for the searched word is capitalized but it is still the same as the word in the sentence. All tests will continue to pass.
+
+**The user enters multiple sentences separated by punctuation. The word count will still display even if the word is next to a punctuation mark**
+* Example Input: "monkeys like bananas."
+* Example Output: 1
+* The input contains a period right next to the word that is being searched for. This word should still return as a match.
 
 ## Support and contact details
 

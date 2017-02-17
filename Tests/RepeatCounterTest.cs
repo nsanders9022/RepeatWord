@@ -99,10 +99,25 @@ namespace RepeatCounterApp
     }
 
     [Fact]
-    public void CountRepeats_MultiWordsCaseInsensitive_1()
+    public void CountRepeats_MultiWordsCaseInsensitive_one()
     {
       //Arrange
       string sentInput = "monkeys like to eat bananas";
+      string wordInput = "Bananas";
+      RepeatCounter newCounter = new RepeatCounter(sentInput, wordInput);
+
+      //Act
+      int result = newCounter.CountRepeats(sentInput, wordInput);
+
+      //Assert
+      Assert.Equal(1, result);
+    }
+
+    [Fact]
+    public void CountRepeats_Punctuation_one()
+    {
+      //Arrange
+      string sentInput = "monkeys like to eat bananas.";
       string wordInput = "Bananas";
       RepeatCounter newCounter = new RepeatCounter(sentInput, wordInput);
 
