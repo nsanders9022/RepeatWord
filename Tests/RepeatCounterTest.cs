@@ -23,5 +23,20 @@ namespace RepeatCounterApp
       Assert.Equal(1, result);
     }
 
+    [Fact]
+    public void CountRepeats_DoubleLetter_one()
+    {
+      //Arrange
+      string sentInput = "bananas";
+      string wordInput = "bananas";
+      RepeatCounter newCounter = new RepeatCounter(sentInput, wordInput);
+
+      //Act
+      int result = newCounter.CountRepeats(sentInput, wordInput);
+
+      //Assert
+      Assert.Equal(1, result);
+    }
+
   }
 }
