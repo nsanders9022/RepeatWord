@@ -25,11 +25,17 @@ namespace RepeatCounterApp
 
       Post["/results"] = _ =>
       {
+        Dictionary<string, string> newDictionary = new Dictionary<string,string>();
         string userSentence = Request.Form["sentence"];
         string userWord = Request.Form["word"];
         RepeatCounter newCounter = new RepeatCounter(userSentence, userWord);
         int result = newCounter.CountRepeats(userSentence, userWord);
-        return View["results.cshtml", result];
+        newDictionary.Add("count", result.ToString());
+        newDictionary.Add("sentence", newCounter.GetSentence());
+        newDictionary.Add("word", newCounter.GetWord());
+
+        // int result = newCounter.CountRepeats(userSentence, userWord);
+        return View["results.cshtml", newDictionary];
       };
     }
 

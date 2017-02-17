@@ -17,6 +17,10 @@
   margin-top: -20px;
 }
 
+body {
+  background-color: #f2d080;
+}
+
 .container {
   padding-top: 20px;
 }
@@ -25,7 +29,7 @@ button{
   margin-top: 30px;
 }
 
-h1, h3 {
+h1, h3, p, label {
   font-family: 'Crafty Girls', cursive;
 }
 
@@ -38,6 +42,10 @@ h3 {
   font-size: 30px;
 }
 
-p a {
-  font-family: 'Crafty Girls', cursive;
+p {
+  font-size: 16px;
+}
+
+label {
+  font-size: 24px;
 }

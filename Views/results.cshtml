@@ -5,18 +5,18 @@
 
 <h1>Results</h1>
 
-@if (@Model == 0)
+@if (Int32.Parse(@Model["count"]) == 0)
 {
-  <h3>Error: That word was not found in the sentence</h3>
+  <h3>ERROR: <strong>@Model["word"]</strong> was not found in the sentence "@Model["sentence"]".</h3>
 }
-@if (@Model == 1)
+@if (Int32.Parse(@Model["count"]) == 1)
 {
-  <h3>That word showed up @Model time</h3>
+  <h3><strong>@Model["word"]</strong> showed up <strong>@Model["count"]</strong> time in the sentence "@Model["sentence"]".</h3>
 }
 
-@if (@Model > 1)
+@if (Int32.Parse(@Model["count"]) > 1)
 {
-  <h3>That word showed up @Model times</h3>
+  <h3><strong>@Model["word"]</strong> showed up <strong>@Model["count"]</strong> times in the sentence "@Model["sentence"]".</h3>
 }
 
 <p><a href="/new">Return to home page</a></p>
