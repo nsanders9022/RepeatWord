@@ -26,10 +26,22 @@ namespace RepeatCounterApp.Objects
 
     public int CountRepeats(string sentenceInput, string wordInput)
     {
+      List<char> noPunctList = new List<char>{};
+      char[] sentenceArray = sentenceInput.ToCharArray();
+
+      for (int i = 0; i < sentenceArray.Length; i++)
+      {
+        if (Char.IsPunctuation(sentenceInput, i) == false)
+        {
+          noPunctList.Add(sentenceArray[i]);
+        }
+      }
+      string sentence = string.Join("", noPunctList.ToArray());
+
       int counter = 0;
-      sentenceInput = sentenceInput.ToLower();
+      sentence = sentence.ToLower();
       wordInput = wordInput.ToLower();
-      string[] wordArray = sentenceInput.Split(null);
+      string[] wordArray = sentence.Split(null);
 
       foreach (string word in wordArray)
       {
