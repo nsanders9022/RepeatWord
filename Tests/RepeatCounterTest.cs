@@ -14,10 +14,10 @@ namespace RepeatCounterApp
       //Arrange
       string sentInput = "a";
       string wordInput = "a";
-      RepeatCounter newCounter = new RepeatCounter;
+      RepeatCounter newCounter = new RepeatCounter(sentInput, wordInput);
 
       //Act
-      string result = newCounter.CountRepeats(sentInput, wordInput);
+      int result = newCounter.CountRepeats(sentInput, wordInput);
 
       //Assert
       Assert.Equal(1, result);
