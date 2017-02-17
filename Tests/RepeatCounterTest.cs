@@ -68,5 +68,20 @@ namespace RepeatCounterApp
       Assert.Equal(2, result);
     }
 
+    [Fact]
+    public void CountRepeats_MultiWordsError_zero()
+    {
+      //Arrange
+      string sentInput = "monkeys like to eat bananas";
+      string wordInput = "apples";
+      RepeatCounter newCounter = new RepeatCounter(sentInput, wordInput);
+
+      //Act
+      int result = newCounter.CountRepeats(sentInput, wordInput);
+
+      //Assert
+      Assert.Equal(0, result);
+    }
+
   }
 }
