@@ -26,12 +26,12 @@ namespace RepeatCounterApp.Objects
 
     public int CountRepeats(string sentenceInput, string wordInput)
     {
-      int result = 0;
+      int counter = 0;
       if (sentenceInput == wordInput)
       {
-        result += 1;
+        counter += 1;
       }
-      return result;
+      return counter;
     }
   }
 }
