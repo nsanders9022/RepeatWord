@@ -9,7 +9,12 @@
 {
   <h3>Error: That word was not found in the sentence</h3>
 }
-@if (@Model > 0)
+@if (@Model == 1)
+{
+  <h3>That word showed up @Model time</h3>
+}
+
+@if (@Model > 1)
 {
   <h3>That word showed up @Model times</h3>
 }

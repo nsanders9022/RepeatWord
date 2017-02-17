@@ -2,13 +2,10 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-
-<h1>Repeat Counter</h1>
-
-<form action="/results" method="post">
+<form action="/results" method="post" class="form-group">
   <label for="sentence">Enter a sentence: </label>
-  <input id="sentence" name="sentence" type="text">
+  <input id="sentence" name="sentence" type="text" class="form-control" required>
   <label for="word">Enter a word to search for: </label>
-  <input id="word" name="word" type="text">
-  <button type="submit">Enter</button>
+  <input id="word" name="word" type="text" class="form-control" required>
+  <button type="submit" class="btn btn-danger" >Enter</button>
 </form>

@@ -1,0 +1,43 @@
+.header {
+  text-align: right;
+  font-family: 'Homemade Apple', cursive;
+  font-size: 80px;
+  color: red;
+  padding-top: 80px;
+  font-weight: bold;
+  padding-right: 50px;
+}
+
+.banner {
+  height: 300px;
+  width: 100%;
+  background-image: url("https://cdn.daysoftheyear.com/wp-content/images/crossword-puzzle-day-e1412545822218.jpg");
+  background-repeat: none;
+  background-position: center;
+  margin-top: -20px;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+button{
+  margin-top: 30px;
+}
+
+h1, h3 {
+  font-family: 'Crafty Girls', cursive;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p a {
+  font-family: 'Crafty Girls', cursive;
+}
