@@ -27,6 +27,7 @@ namespace RepeatCounterApp.Objects
     public int CountRepeats(string sentenceInput, string wordInput)
     {
       int counter = 0;
+      wordInput = wordInput.ToLower();
       string[] wordArray = sentenceInput.Split(null);
 
       foreach (string word in wordArray)
