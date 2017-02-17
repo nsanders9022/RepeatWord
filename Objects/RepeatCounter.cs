@@ -26,6 +26,7 @@ namespace RepeatCounterApp.Objects
 
     public int CountRepeats(string sentenceInput, string wordInput)
     {
+      //Gets rid of punctuation
       List<char> noPunctList = new List<char>{};
       char[] sentenceArray = sentenceInput.ToCharArray();
 
@@ -38,6 +39,7 @@ namespace RepeatCounterApp.Objects
       }
       string sentence = string.Join("", noPunctList.ToArray());
 
+      //main part of method for comparing words
       int counter = 0;
       sentence = sentence.ToLower();
       wordInput = wordInput.ToLower();
