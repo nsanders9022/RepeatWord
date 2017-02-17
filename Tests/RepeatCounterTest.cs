@@ -8,7 +8,20 @@ namespace RepeatCounterApp
   public class RepeatCounterTest
   {
 
+    [Fact]
+    public void CountRepeats_SingleLetter_one()
+    {
+      //Arrange
+      string sentInput = "a";
+      string wordInput = "a";
+      RepeatCounter newCounter = new RepeatCounter;
 
+      //Act
+      string result = newCounter.CountRepeats(sentInput, wordInput);
+
+      //Assert
+      Assert.Equal(1, result);
+    }
 
   }
 }
