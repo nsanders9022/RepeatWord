@@ -33,7 +33,7 @@ namespace RepeatCounterApp.Objects
       {
         if (word == wordInput)
         {
-          counter = 1;
+          counter += 1;
         }
       }
       return counter;
