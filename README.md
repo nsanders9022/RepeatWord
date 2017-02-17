@@ -48,6 +48,11 @@ This web application is for counting the number of times a word is included in u
 * Example Output: "The word banana could not be found in the sentence"
 * The input for the searched word is very similar to the word in the sentence but it is not an exact match.
 
+**The user inputs multiple words and a word to search for and it is case insensitive to account for user mistakes**
+* Example Input: "monkeys like to eat bananas", "Bananas"
+* Example Output: 1
+* The input for the searched word is capitalized but it is still the same as the word in the sentence.
+
 ## Support and contact details
 
 Please contact Nicole Sanders at nsanders9022@gmail.com with any questions, concerns, or suggestions.
