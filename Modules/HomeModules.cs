@@ -18,14 +18,19 @@ namespace RepeatCounterApp
         return View["results.cshtml"];
       };
 
+      Get["/new"] = _ =>
+      {
+        return View["index.cshtml"];
+      };
+
       Post["/results"] = _ =>
       {
         string userSentence = Request.Form["sentence"];
         string userWord = Request.Form["word"];
         RepeatCounter newCounter = new RepeatCounter(userSentence, userWord);
-        newCounter.CountRepeats(userSentence, userWord);
-        return View["results.cshtml", newCounter];
-      }
+        int result = newCounter.CountRepeats(userSentence, userWord);
+        return View["results.cshtml", result];
+      };
     }
 
   }

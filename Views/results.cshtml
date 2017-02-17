@@ -4,7 +4,9 @@
 {
   <h3>Error: That word was not found in the sentence</h3>
 }
-@else
+@if (@Model > 0)
 {
   <h3>That word showed up @Model times</h3>
 }
+
+<p><a href="/new">Return to home page</a></p>
