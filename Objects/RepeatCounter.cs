@@ -27,11 +27,17 @@ namespace RepeatCounterApp.Objects
     public int CountRepeats(string sentenceInput, string wordInput)
     {
       int counter = 0;
-      if (sentenceInput == wordInput)
+      string[] wordArray = sentenceInput.Split(null);
+
+      foreach (string word in wordArray)
       {
-        counter += 1;
+        if (word == wordInput)
+        {
+          counter = 1;
+        }
       }
       return counter;
+
     }
   }
 }
